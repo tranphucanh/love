@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Thư Chúc Mừng</title>
+    <title>Anh iu Na</title>
     <style>
       body {
         font-family: "Arial", sans-serif;
@@ -33,16 +33,40 @@
       }
 
       #letter {
+        height: 400px;
         display: none;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 20px;
-        background-color: #fff;
-        color: #333;
+        background-image: url('./na.jpg');
+        background-size: cover;
+        color: #ffffff;
         border-radius: 10px;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        font-size: larger;
+        text-align: center;
+      }
+
+      #letter h2 {
+        width: 100%;
+        text-align: center;
+        color: #fe7667;
+      }
+
+      #letter a {
+        text-decoration: none;
+        padding: 10px;
+        background-color: #fe7667;
+        color: #fff;
+        font-size: large;
+        border-radius: 10px;
+      }
+
+      #video {
+        display: none;
+        z-index: 999;
       }
 
       #heart {
@@ -70,8 +94,28 @@
     </div>
 
     <div id="letter">
-      <p>Chúc mừng kỉ niệm yêu nhau!</p>
-      <div id="heart">❤️</div>
+      <h2>❤️💐 Happy anniversary 🌻❤️</h2>
+      <p>Hé nhô cục zàng iu dấu cute của anh. 
+        Chúng mình lại đi cùng nhau được thêm 1 
+        đoạn đường nữa rùi he. Mong chúng mình sẽ 
+        mãi như z sẽ moãi cùng nhau bước típ trên 
+        đoạn đường phía trước nhó. Thời gian qua 
+        anh cóa làm em bùn nhìu choa anh cin lũi 
+        pé nho nhưng thực tâm anh iu em nhìu lém, 
+        nhìn em khók anh đau lòng lúm. Nhìn em mệt 
+        mỏi xót pé qué tròi, nhưng anh biết pé iu 
+        của anh mạnh mẽ lúm mè phải hong, ngoài kia 
+        có mệt mỏi quá thì em hãy tựa zào zai anh nhó. Anh mong rằng tình iu chúng mình sẽ thật đẹp,
+        thật zui. Hãy cùng nhau tiến lên cùng nhau tốt hơn zà cùng nhau đi xa hơn nhóeeeee. Cảm ưn em zì đã lun bên anh, lun iu anh thật nhìu nhó ❤️. Yêu zợ iu của anh thật nhìuuuuuuuuu 💕💐🌻😘🥰
+      </p>
+      <a href="#" onClick="openVideo()">Click Here barbie 😉</a>
+      <div id="heart">❤️💐</div>
+    </div>
+
+    <div id="video">
+      <video width="720" height="640" controls>
+        <source src="./401618400_6541222969320413_5703567037736972915_n.mp4" type="video/mp4">
+      </video>
     </div>
 
     <script>
@@ -88,6 +132,20 @@
           letter.style.display = "block";
           heart.style.display = "block";
         }, 300);
+      }
+
+      function openVideo() {
+        const videoElement = document.getElementById("video");
+        const envelope = document.getElementById("envelope");
+        const body = document.querySelector("body");
+        
+        const letter = document.getElementById("letter");
+        const heart = document.getElementById("heart");
+        videoElement.style.display="block";
+        envelope.style.display = "none";
+        letter.style.display = "none";
+        heart.style.display = "none";
+        body.style.backgroundImage="url('./400-phu-kien-trang-tri-sinh-nhat-jennyparty-co-happy-anni-nau.jpg')";
       }
     </script>
   </body>
