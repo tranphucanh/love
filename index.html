@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thư Chúc Mừng</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        /* background-image: url('./400-phu-kien-trang-tri-sinh-nhat-jennyparty-co-happy-anni-nau.jpg'); */
+        /* background-repeat: no-repeat, repeat; */
+        /* background-size:contain; */
+        color: #fff;
+        overflow: hidden;
+      }
+
+      #envelope {
+        position: absolute;
+        padding: 2rem;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      #envelope img {
+        width: 950px;
+        height: 900px;
+      }
+
+      #letter {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        background-color: #fff;
+        color: #333;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+
+      #heart {
+        display: none;
+        font-size: 2em;
+        color: #e74c3c;
+        margin-top: 20px;
+        animation: heartbeat 1.5s infinite;
+      }
+
+      @keyframes heartbeat {
+        0%,
+        100% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.3);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="envelope" onclick="openLetter()">
+        <img src="./pngtree-letters-love-png-image_8863901.png"/>
+    </div>
+
+    <div id="letter">
+      <p>Chúc mừng kỉ niệm yêu nhau!</p>
+      <div id="heart">❤️</div>
+    </div>
+
+    <script>
+      function openLetter() {
+        const envelope = document.getElementById("envelope");
+        const letter = document.getElementById("letter");
+        const heart = document.getElementById("heart");
+
+        // Rotate envelope
+        envelope.style.transform = "rotateY(180deg)";
+
+        // Show letter with animation
+        setTimeout(() => {
+          letter.style.display = "block";
+          heart.style.display = "block";
+        }, 300);
+      }
+    </script>
+  </body>
+</html>
